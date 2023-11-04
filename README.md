@@ -20,5 +20,5 @@ python3 bot.py
 
 ## Important notes
 - Stage channels are ignored
-- Manage channel permission is required (Channels that bot has no access to are ignored)
+- Manage channel permission is required (Channels bot has no access to are ignored)
 - Bot has to be up for 24/7, if not, channel duplication is expected
