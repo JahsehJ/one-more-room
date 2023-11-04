@@ -7,11 +7,16 @@ Simplest solution to messy voice chats
 If no more empty channel is presented, a new one will be created. (Auto-scaling)  
 This means there will always be 1 extra room for other members!
 
-## Run it
+## Requirements
 
-### Requirements
 - python >= 3.11
 - discord.py >= 2.3
+
+## Configuration
+
+Remove the `.example` suffix from `config.py.example` to get it to work
+
+## Run the bot
 
 ```
 # Using a venv is always preferred
