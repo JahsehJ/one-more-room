@@ -16,21 +16,24 @@ class OneMoreRoom(commands.Cog):
         before: discord.VoiceState,
         after: discord.VoiceState,
     ):
-        if (
-            before.channel
-            and isinstance(before.channel, discord.VoiceChannel)
-            and before.channel.id not in config.ignored_channels
-            and not before.channel.members
-        ):
-            await before.channel.delete()
+        try:
+            if (
+                before.channel
+                and isinstance(before.channel, discord.VoiceChannel)
+                and before.channel.id not in config.ignored_channels
+                and not before.channel.members
+            ):
+                await before.channel.delete()
 
-        if (
-            after.channel
-            and isinstance(after.channel, discord.VoiceChannel)
-            and after.channel.id not in config.ignored_channels
-            and len(after.channel.members) == 1
-        ):
-            await after.channel.clone()
+            if (
+                after.channel
+                and isinstance(after.channel, discord.VoiceChannel)
+                and after.channel.id not in config.ignored_channels
+                and len(after.channel.members) == 1
+            ):
+                await after.channel.clone()
+        except discord.Forbidden:
+            pass
 
 
 async def setup(bot: OneMoreRoomBot):
