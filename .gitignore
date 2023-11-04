@@ -1,0 +1,5 @@
+# Sensitive config
+config.py
+
+# Python generated cache
+__pycache__

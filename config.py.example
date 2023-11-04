@@ -1,0 +1,3 @@
+token = ""
+prefix = "?"
+ignored_channels = [1146027579309052004]  # Must be a list of channel IDs (Optional)
